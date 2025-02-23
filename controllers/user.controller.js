@@ -4,7 +4,7 @@ export const getUserSavedPosts = async (req, res) => {
   const clerkUserId = req.auth.userId;
 
   if (!clerkUserId) {
-    return res.status(401).json("Not authenticated!");
+    return res.status(401).json("Not authenticated!123");
   }
 
   const user = await User.findOne({ clerkUserId });
@@ -17,7 +17,7 @@ export const savePost = async (req, res) => {
   const postId = req.body.postId;
 
   if (!clerkUserId) {
-    return res.status(401).json("Not authenticated!");
+    return res.status(401).json("Not authenticated!123");
   }
 
   const user = await User.findOne({ clerkUserId });
@@ -34,5 +34,5 @@ export const savePost = async (req, res) => {
     });
   }
 
-  res.status(200).json(isSaved ? "Post unsaved" : "Post saved");
+  res.status(200).json(isSaved ? "Post unsaved" : "Post saved123");
 };

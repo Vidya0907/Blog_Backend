@@ -58,6 +58,6 @@ export const clerkWebHook = async (req, res) => {
   }
 
   return res.status(200).json({
-    message: "Webhook received",
+    message: "Webhook received123",
   });
 };
